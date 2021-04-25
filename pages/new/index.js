@@ -16,11 +16,12 @@ function myNew(Fn, ...args) {
 }
 
 function objectFactory() {
-  var obj = new Object(),
+  var obj = {}, //1.创建一个空对象，
+    // 构造函数并继承传参
     Constructor = [].shift.call(arguments);
-
+  // 将对象的__proto__指向构造函数的prototype 这里我两步一起做了
   obj.__proto__ = Constructor.prototype;
-
+  // 将构造函数中的this指向obj，执行构造函数代码,获取返回值
   var ret = Constructor.apply(obj, arguments);
 
   return typeof ret === "object" ? ret : obj;

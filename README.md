@@ -3,7 +3,7 @@
  * @Author: ChengFeng Zeng
  * @Date: 2020-08-19 17:58:32
  * @LastEditors: chengfengZeng
- * @LastEditTime: 2021-04-21 18:31:41
+ * @LastEditTime: 2021-04-21 23:59:18
 -->
 
 # 技术点目录
@@ -15,3 +15,4 @@
 - [原型、原型链](https://github.com/zchfeng/js-base/tree/master/pages/prototype)
 - [promist 的实现](https://github.com/zchfeng/js-base/tree/master/pages/myPromise)
 - [深拷贝、浅拷贝](https://github.com/zchfeng/js-base/tree/master/pages/deepCopy)
+- [new 实现](https://github.com/zchfeng/js-base/tree/master/pages/new)

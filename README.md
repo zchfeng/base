@@ -3,7 +3,7 @@
  * @Author: ChengFeng Zeng
  * @Date: 2020-08-19 17:58:32
  * @LastEditors: chengfengZeng
- * @LastEditTime: 2021-04-21 23:59:18
+ * @LastEditTime: 2021-05-11 10:32:39
 -->
 
 # 技术点目录
@@ -16,3 +16,13 @@
 - [promist 的实现](https://github.com/zchfeng/js-base/tree/master/pages/myPromise)
 - [深拷贝、浅拷贝](https://github.com/zchfeng/js-base/tree/master/pages/deepCopy)
 - [new 实现](https://github.com/zchfeng/js-base/tree/master/pages/new)
+- [mark-down 书写](https://github.com/zchfeng/js-base/tree/master/pages/mark-down)
+- [设计模式](https://github.com/zchfeng/js-base/tree/master/pages/design-pattern)
+
+md 文档书写
+event loop
+设计模式
+数据结构
+瀑布流实现
+懒加载、预加载时间
+小程序授权流程

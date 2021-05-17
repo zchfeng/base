@@ -1,11 +1,3 @@
-<!--
- * @Description:
- * @Author: ChengFeng Zeng
- * @Date: 2020-08-19 17:58:32
- * @LastEditors: chengfengZeng
- * @LastEditTime: 2021-05-11 10:32:39
--->
-
 # 技术点目录
 
 - [数据类型](https://github.com/zchfeng/js-base/tree/master/pages/date-type)
@@ -13,8 +5,8 @@
 - [ES7 新特性](https://github.com/zchfeng/js-base/tree/master/pages/es7)
 - [ES7 新特性](https://github.com/zchfeng/js-base/tree/master/pages/es8)
 - [原型、原型链](https://github.com/zchfeng/js-base/tree/master/pages/prototype)
-- [promist 的实现](https://github.com/zchfeng/js-base/tree/master/pages/myPromise)
-- [深拷贝、浅拷贝](https://github.com/zchfeng/js-base/tree/master/pages/deepCopy)
+- [promist 的实现](https://github.com/zchfeng/js-base/tree/master/pages/my-promise)
+- [深拷贝、浅拷贝](https://github.com/zchfeng/js-base/tree/master/pages/deep-copy)
 - [new 实现](https://github.com/zchfeng/js-base/tree/master/pages/new)
 - [mark-down 书写](https://github.com/zchfeng/js-base/tree/master/pages/mark-down)
 - [设计模式](https://github.com/zchfeng/js-base/tree/master/pages/design-pattern)

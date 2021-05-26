@@ -1,3 +1,11 @@
+<!--
+ * @Description:
+ * @Author: chengfengZeng
+ * @Date: 2021-05-17 18:21:06
+ * @LastEditors: chengfengZeng
+ * @LastEditTime: 2021-05-20 17:53:14
+-->
+
 # 设计模式
 
 ## 1、单例模式
@@ -14,3 +22,8 @@
 
 - 定义：定义一个创建产品的工厂接口，把产品对象的实际创建工作推迟到具体子工厂类当中
 - [原型模式](https://github.com/zchfeng/js-base/tree/master/pages/design-pattern/factory-model)
+
+## 3、适配器模式
+
+- 定义：解决两个软件实体间的接口不兼容的问题，对不兼容的部分进行适配
+- [原型模式](https://github.com/zchfeng/js-base/tree/master/pages/design-pattern/adapter-model)

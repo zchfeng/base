@@ -1,3 +1,11 @@
+<!--
+ * @Description:
+ * @Author: chengfengZeng
+ * @Date: 2021-04-21 18:27:10
+ * @LastEditors: chengfengZeng
+ * @LastEditTime: 2021-06-01 14:15:30
+-->
+
 # 技术点目录
 
 - [数据类型](https://github.com/zchfeng/js-base/tree/master/pages/date-type)
@@ -10,6 +18,12 @@
 - [new 实现](https://github.com/zchfeng/js-base/tree/master/pages/new)
 - [mark-down 书写](https://github.com/zchfeng/js-base/tree/master/pages/mark-down)
 - [设计模式](https://github.com/zchfeng/js-base/tree/master/pages/design-pattern)
+- 数据结构
+
+  - [栈](https://github.com/zchfeng/js-base/tree/master/pages/data-structure/stack)
+  - [队列](https://github.com/zchfeng/js-base/tree/master/pages/data-structure/queue)
+
+- [瀑布流](https://github.com/zchfeng/js-base/tree/master/pages/waterfall-flow)
 
 md 文档书写
 event loop

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"  initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            position: relative;
+            height: 100%;
+            width: 1000px;
+            
+        }
+        img{
+            position: absolute;
+            width: 300px;
+            margin: 0 10px;
+            border: solid 1px red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2F1812.img.pp.sohu.com.cn%2Fimages%2Fblog%2F2009%2F11%2F18%2F18%2F8%2F125b6560a6ag214.jpg&refer=http%3A%2F%2F1812.img.pp.sohu.com.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1625207488&t=c91520c9ea11e6f4060067d793c32ba4" />
+        <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2594671789,2155354930&fm=11&gp=0.jpg" />
+        <img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1999921673,816131569&fm=26&gp=0.jpg" />
+        <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.nipic.com%2F2008-11-20%2F20081120122029174_2.jpg&refer=http%3A%2F%2Fpic1.nipic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1625207545&t=61a18f4dfe8620d9f4f27e23e1706834" />
+        <img src="img/img5.jpg" />
+        <img src="img/img6.jpg" />
+        <img src="img/img7.jpg" />
+        <img src="img/img1.gif" />
+        <img src="img/img2.jpg" />
+        <img src="img/img3.jfif" />
+        <img src="img/img4.bmp" />
+        <img src="img/img5.jpg" />
+        <img src="img/img6.jpg" />
+        <img src="img/img7.jpg" />
+        <img src="img/img1.gif" />
+        <img src="img/img2.jpg" />
+        <img src="img/img3.jfif" />
+        <img src="img/img4.bmp" />
+        <img src="img/img5.jpg" />
+        <img src="img/img6.jpg" />
+        <img src="img/img7.jpg" />
+    </div>
+</body>
+</html>
+<script>
+    function fall(){
+    let minColum = []
+    const columNumber = 3
+    var imgs = document.getElementsByTagName("img")
+    for(let i = 0; i<imgs.length; i++){
+        let currentImg =  imgs[i]
+        // imgs[i].onload = function(){
+            if(i<columNumber){
+                currentImg.style.top = 0 
+                currentImg.style.left =  300 * i + 'px'
+                minColum.push({
+                    index:i,
+                    height:currentImg.height
+                })
+                minColum.sort((a,b)=>{
+                    return a.height - b.height
+                })
+            }else{
+                console.log(minColum,currentImg.height,121,i, minColum[0].height + currentImg.height)
+                currentImg.style.top = minColum[0].height + 'px'
+                currentImg.style.left =  300 * minColum[0].index + 'px'
+                minColum[0] ={
+                    index : minColum[0].index,
+                    height :minColum[0].height + currentImg.height
+                } 
+                minColum.sort((a,b)=>{
+                    return a.height - b.height
+                })
+            }
+    }
+    }
+
+    window.onload=fall
+</script>

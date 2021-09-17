@@ -3,7 +3,7 @@
  * @Author: chengfengZeng
  * @Date: 2021-04-21 18:27:10
  * @LastEditors: chengfengZeng
- * @LastEditTime: 2021-06-01 14:15:30
+ * @LastEditTime: 2021-09-17 13:58:49
 -->
 
 # 技术点目录
@@ -25,6 +25,10 @@
 
 - [瀑布流](https://github.com/zchfeng/js-base/tree/master/pages/waterfall-flow)
 
+- [使用 background 实现花式文字效果] (https://github.com/zchfeng/js-base/tree/master/pages/fancy-writing)
+
+- [树结构操作](https://github.com/zchfeng/js-base/tree/master/pages/tree-operation)
+
 md 文档书写
 event loop
 设计模式
@@ -32,3 +36,4 @@ event loop
 瀑布流实现
 懒加载、预加载时间
 小程序授权流程
+伪递归

@@ -1,0 +1,43 @@
+<!--
+ * @Description: 
+ * @Author: chengfengZeng
+ * @Date: 2021-09-16 14:13:17
+ * @LastEditors: chengfengZeng
+ * @LastEditTime: 2021-09-16 14:41:43
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            width: 600px;
+            font-size: 24px;
+            color: #666;
+        }
+        a {    
+            background:  linear-gradient(90deg, #999, #999),
+                        linear-gradient(90deg, #fc0, #fc0);
+            background-size: 100% 100%, 0 100px;
+            background-repeat: no-repeat;
+            background-position: 100% 100%, 0 100%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            transition: 3s all linear;
+        }
+
+        p:hover a {
+            background-size: 0 100px, 100% 100%;
+            color: transparent;
+        }
+
+
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <a>Mollitia nostrum placeat consequatur deserunt velit ducimus possimus commodi temporibus debitis quam</a>, molestiae laboriosam sit repellendus sed sapiente quidem quod accusantium vero.</p>
+</body>
+</html>

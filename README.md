@@ -1,11 +1,3 @@
-<!--
- * @Description:
- * @Author: chengfengZeng
- * @Date: 2021-04-21 18:27:10
- * @LastEditors: chengfengZeng
- * @LastEditTime: 2021-09-17 13:58:49
--->
-
 # 技术点目录
 
 - [数据类型](https://github.com/zchfeng/js-base/tree/master/pages/date-type)
@@ -28,6 +20,8 @@
 - [使用 background 实现花式文字效果] (https://github.com/zchfeng/js-base/tree/master/pages/fancy-writing)
 
 - [树结构操作](https://github.com/zchfeng/js-base/tree/master/pages/tree-operation)
+
+- [模拟 Vue2 的响应式原理](https://github.com/zchfeng/js-base/tree/master/pages/vue2-mode)
 
 md 文档书写
 event loop

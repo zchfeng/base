@@ -23,11 +23,12 @@
 
 - [模拟 Vue2 的响应式原理](https://github.com/zchfeng/js-base/tree/master/pages/vue2-mode)
 
+- [小程序授权流程](https://github.com/zchfeng/js-base/tree/master/pages/wx-auth)
+
 md 文档书写
 event loop
 设计模式
 数据结构
 瀑布流实现
 懒加载、预加载时间
-小程序授权流程
 伪递归

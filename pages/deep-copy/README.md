@@ -7,4 +7,4 @@
 - 深拷贝  
   JSON.stringify()
   数组：slice() concat()  
-  深层递归变量：[deepCopy](https://github.com/zchfeng/js-base/tree/master/pages/deep-copy/deep-copy.js)
+  深层递归遍历：[deepCopy](https://github.com/zchfeng/js-base/tree/master/pages/deep-copy/deep-copy.js)

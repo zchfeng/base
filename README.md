@@ -25,6 +25,8 @@
 
 - [小程序授权流程](https://github.com/zchfeng/js-base/tree/master/pages/wx-auth)
 
+- [20 个实用的 JavaScript 单行代码](https://github.com/zchfeng/js-base/tree/master/pages/wx-auth)
+
 md 文档书写
 event loop
 设计模式

@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>测试页面</h1>
+</body>
+<script>
+    function debug(){
+        let odom =  document.getElementsByTagName('h1')[0]
+        odom.innerHTML = '控制台测试'
+    }
+//    setInterval(()=>{
+//     debugger;
+//    },1000)
+ document.addEventListener('visibilityChange',()=>{
+    console.log(111)
+     console.log(document.visibilityState,"document.visibilityState")
+     console.log(document.hidden,"document.hidden")
+ })
+
+ function fn1(num){
+     let res = num
+     let fn = function (num2){
+        res = res + num2
+        return fn
+     }
+     fn.toString = fn.valueOf = ()=> res
+    return fn
+ }
+
+ function fn2(){
+     console.log(arguments,'arguments')
+     if(arguments.length === 0){
+         return 0
+     }else{
+        return [...arguments].reduce((p,n)=>p+n)
+     }
+ }
+
+ function fn3(){
+     let res = [...arguments]
+     let fn = function(){
+         res = res.concat([...arguments])
+         return fn
+     }
+     fn.toString = ()=> res.reduce((pro,pev) => pro+pev)
+     return fn
+ }
+</script>
+</html>

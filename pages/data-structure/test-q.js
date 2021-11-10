@@ -3,7 +3,7 @@
  * @Author: chengfengZeng
  * @Date: 2021-10-28 16:19:22
  * @LastEditors: chengfengZeng
- * @LastEditTime: 2021-10-29 11:40:07
+ * @LastEditTime: 2021-11-08 17:10:05
  */
 // Q1:小明手中有 1，5，10，50，100 五种面额的纸币，每种纸币对应张数分别为 5，2，2，3，5 张。
 // 若小明需要支付 456 元，则需要多少张纸币？
@@ -60,7 +60,7 @@ n的时候，只能从第n-1阶爬1个台阶或者第n-2阶爬2个台阶到达�
 即：dp[n] = dp[n-1]+dp[n-2] */
 
 // 动态规划-空间换时间，把计算的值存储起来
-function climbStairs1(n) {
+function climbStairs(n) {
   let dp = [];
   dp[0] = 0;
   dp[1] = 1;
@@ -69,10 +69,9 @@ function climbStairs1(n) {
     dp[index] = dp[index - 1] + dp[index - 2];
   }
 
-  return `dp:${dp[n]}
-          记录步数${dp}
-      `;
+  return dp[n];
 }
+
 climbStairs1(9);
 // console.log(climbStairs1(9), "climbStairs12(9)");
 
@@ -116,7 +115,7 @@ function climbStairs3(n) {
 }
 
 climbStairs3(9); // 55
-console.log(climbStairs3(9), "climbStairs3");
+// console.log(climbStairs3(9), "climbStairs3");
 
 // 尾递归
 function climbStairs4(n, dp1 = 1, dp2 = 2) {
@@ -135,4 +134,109 @@ function climbStairs4(n, dp1 = 1, dp2 = 2) {
 }
 
 climbStairs4(9); // 55
-console.log(climbStairs4(9), "climbStairs4");
+// console.log(climbStairs4(9), "climbStairs4");
+
+/* 2、给定一个三角形，找出自顶向下的最小路径和。每一步只能移动到下一行中相邻的结点上。 */
+// [
+//    [2],
+//   [3,4],
+//  [6,5,7],
+// [4,1,8,3]
+// ]
+// 自顶向下的最小路径和为 11（即，2 + 3 + 5 + 1 = 11）。
+
+/* 分析：由下往上计算，要加上一层的某一个值，必须是下一层的相邻两个，即arr[i][j]只能被arr[i+1][j]或者arr[i+1][j+1]相加
+    所以计算最小值，只需要拿顶点与下一层最小路径和相加，
+    同理，下一层最小值，只需要拿顶点与下下一层最小路径和相加，
+    ...
+  即：最小路径 = 下一层最小路径 + 顶点值[0][0]
+   dp[i][j] = Math.min(dp[i + 1][j], dp[i + 1][j + 1]) + triangle[i][j] */
+const arr = [
+  [2],
+  [3, 4],
+  [6, 5, 7],
+  [4, 1, 8, 3],
+  [4, 5, 8, 3, 5],
+  [4, 5, 8, 3, 5, 7],
+];
+// 动态规划-把数组转成当前最小路径和
+function triangle_path1(arr) {
+  let n = arr.length; // arr深度，每层个数等于当前层
+  let res = new Array(n);
+  res[n - 1] = arr[n - 1]; // 最下面一层不用计算
+  for (let i = n - 2; i >= 0; i--) {
+    for (let j = 0; j < i + 1; j++) {
+      if (!res[i]) {
+        res[i] = [];
+      }
+      res[i][j] = Math.min(res[i + 1][j], res[i + 1][j + 1]) + arr[i][j];
+    }
+  }
+  return {
+    sum: `最小路径和${res[0][0]}`,
+    res,
+  };
+}
+
+console.log(triangle_path1(arr), "triangle_path1");
+
+//递归
+function triangle_path2(arr) {
+  if (arr.length === 1) {
+    return arr[0][0];
+  }
+
+  let currentArr = arr.concat([]);
+  let leftArr = [];
+  let rightArr = [];
+
+  currentArr.shift();
+
+  currentArr.map((item) => {
+    leftArr.push(item.slice(0, item.length - 1));
+    rightArr.push(item.slice(1));
+  });
+
+  return (
+    Math.min(triangle_path2(leftArr), triangle_path2(rightArr)) + arr[0][0]
+  );
+}
+// console.log(triangle_path2(arr), "triangle_path2");
+
+// 3、给定一个整数数组 nums ，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。
+// 输入: [-2,1,-3,4,-1,2,1,-5,4],
+// 输出: 6
+// 解释: 连续子数组 [4,-1,2,1] 的和最大，为 6。
+/* 分析：求数组某一点的最大区间和方式：这一点的上一点最大和+当前值 dp[n] = dp[n-1]+arr[n]
+          如果dn[n-1]<0,dp[n] = arr[n] */
+
+function test3(arr) {
+  let dp = new Array(arr.length);
+  let dpArr = new Array(arr.length);
+  dp[0] = arr[0];
+  dpArr[0] = [arr[0]];
+  let resObj = {
+    value: arr[0],
+    valueArr: dpArr[0],
+  };
+
+  for (let index = 1; index < arr.length; index++) {
+    if (dp[index - 1] > 0) {
+      dp[index] = dp[index - 1] + arr[index];
+      dpArr[index] = [...dpArr[index - 1], arr[index]];
+      resObj =
+        resObj.value < dp[index]
+          ? {
+              value: dp[index],
+              valueArr: dpArr[index],
+            }
+          : resObj;
+    } else {
+      dp[index] = arr[index];
+      dpArr[index] = [arr[index]];
+    }
+  }
+
+  return resObj;
+}
+// console.log(test3([-2, 1, -3, 4, -1, 2, 1, -5, 4]));

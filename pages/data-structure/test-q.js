@@ -1,9 +1,9 @@
 /*
- * @Description:算法题
+ * @Description:
  * @Author: chengfengZeng
  * @Date: 2021-10-28 16:19:22
  * @LastEditors: chengfengZeng
- * @LastEditTime: 2021-11-08 17:10:05
+ * @LastEditTime: 2021-11-10 15:56:12
  */
 // Q1:小明手中有 1，5，10，50，100 五种面额的纸币，每种纸币对应张数分别为 5，2，2，3，5 张。
 // 若小明需要支付 456 元，则需要多少张纸币？

@@ -10,6 +10,7 @@
 - [new 实现](https://github.com/zchfeng/js-base/tree/master/pages/new)
 - [mark-down 书写](https://github.com/zchfeng/js-base/tree/master/pages/mark-down)
 - [设计模式](https://github.com/zchfeng/js-base/tree/master/pages/design-pattern)
+- [排序](https://github.com/zchfeng/js-base/tree/master/pages/sort)
 - 数据结构
 
   - [栈](https://github.com/zchfeng/js-base/tree/master/pages/data-structure/stack)

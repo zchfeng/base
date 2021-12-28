@@ -1,10 +1,3 @@
-/*
- * @Description:
- * @Author: chengfengZeng
- * @Date: 2021-05-21 18:02:59
- * @LastEditors: chengfengZeng
- * @LastEditTime: 2021-05-27 16:40:07
- */
 // js实现栈结构
 class Stack {
   constructor() {
@@ -40,7 +33,6 @@ console.log(stack);
 stack.push(1);
 stack.push(2);
 stack.pop();
-stack.pop();
 
 var hammingDistance = function (x, y) {
   let xStack = [];
@@ -73,4 +65,69 @@ var hammingDistance = function (x, y) {
   console.log(yLength, yStack, "y");
   return yLength - xLength;
 };
-console.log(hammingDistance(0, 6));
+// console.log(hammingDistance(0, 6));
+var isValid = function (s) {
+  let stack = new Stack();
+  for (let i = 0; i < s.length; i++) {
+    let current = s[i];
+
+    let stackTopItem = stack.peek();
+
+    if (current === "(" || current === "{" || current === "[") {
+      stack.push(current);
+      continue;
+    }
+
+    let hasPop =
+      (current === ")" && stackTopItem === "(") ||
+      (current === "}" && stackTopItem === "{") ||
+      (current === "]" && stackTopItem === "[");
+    if (hasPop) {
+      stack.pop();
+    } else {
+      return false;
+    }
+  }
+
+  if (stack.isEmpty()) return false;
+
+  return true;
+};
+console.log(isValid("(}"));
+
+class LinkListItem {
+  constructor(data) {
+    this.data = data;
+    this.next = null;
+  }
+}
+class MyStack {
+  constructor() {
+    this.top = null;
+  }
+
+  // 向栈顶添加元素
+  push(value) {
+    let newNode = new LinkListItem(value);
+    if (this.top !== null) {
+      newNode.next = this.top;
+    }
+    this.top = newNode;
+  }
+  // 向栈顶删除元素-返回删除元素
+  pop() {
+    if (this.top === null) {
+      return -1;
+    }
+    let value = this.top.data;
+    this.top = this.top.next;
+    return value;
+  }
+}
+
+let myStack = new MyStack();
+myStack.push(1);
+myStack.push(2);
+console.log(myStack, "myStack");
+let pop = myStack.pop();
+console.log(myStack, pop, "myStack");

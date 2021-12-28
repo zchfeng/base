@@ -3,7 +3,7 @@
  * @Author: chengfengZeng
  * @Date: 2021-11-05 14:08:18
  * @LastEditors: chengfengZeng
- * @LastEditTime: 2021-11-05 15:23:24
+ * @LastEditTime: 2021-12-02 16:46:15
  */
 /* 假如有一排房子，共 n 个，每个房子可以被粉刷成红色、蓝色或者绿色这三种颜色中的一种，你需要粉刷所有的房子并且使其相邻的两个房子颜色不能相同。
 当然，因为市场上不同颜色油漆的价格不同，所以房子粉刷成不同颜色的花费成本也是不同的。每个房子粉刷成不同颜色的花费是以一个 n x 3 的矩阵来表示的。
@@ -55,3 +55,50 @@ function test2(arr) {
 }
 
 console.log(test2([2, 7, 9, 3, 1]), "test2");
+
+var findRelativeRanks = function (score) {
+  let resRank = [];
+  let minRankValue = -1;
+  let result = [];
+  for (let i = 0; i < score.length; i++) {
+    let currentScore = score[i];
+    let resObj = {
+      value: currentScore,
+      ranking: resRank.length + 1,
+    };
+    if (!resRank.length || currentScore < minRankValue) {
+      minRankValue = currentScore;
+    } else {
+      for (let j = 0; j < resRank.length; j++) {
+        if (currentScore > resRank[j].value) {
+          resObj.ranking = Math.min(resObj.ranking, resRank[j].ranking);
+          resRank[j].ranking += 1;
+        }
+      }
+    }
+    resRank.push(resObj);
+  }
+  console.log(resRank);
+  for (let i = 0; i < resRank.length; i++) {
+    let rank;
+    switch (resRank[i].ranking) {
+      case 1:
+        rank = "Gold Medal";
+        break;
+      case 2:
+        rank = "Silver Medal";
+        break;
+      case 3:
+        rank = "Bronze Medal";
+        break;
+      default:
+        rank = String(resRank[i].ranking);
+        break;
+    }
+
+    result.push(rank);
+  }
+  return result;
+};
+
+console.log(findRelativeRanks([5, 4, 3, 2, 1, 6]));

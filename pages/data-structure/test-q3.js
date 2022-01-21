@@ -3,7 +3,7 @@
  * @Author: chengfengZeng
  * @Date: 2021-11-05 14:08:18
  * @LastEditors: chengfengZeng
- * @LastEditTime: 2021-12-02 16:46:15
+ * @LastEditTime: 2022-01-12 17:18:18
  */
 /* 假如有一排房子，共 n 个，每个房子可以被粉刷成红色、蓝色或者绿色这三种颜色中的一种，你需要粉刷所有的房子并且使其相邻的两个房子颜色不能相同。
 当然，因为市场上不同颜色油漆的价格不同，所以房子粉刷成不同颜色的花费成本也是不同的。每个房子粉刷成不同颜色的花费是以一个 n x 3 的矩阵来表示的。
@@ -102,3 +102,14 @@ var findRelativeRanks = function (score) {
 };
 
 console.log(findRelativeRanks([5, 4, 3, 2, 1, 6]));
+
+let arrData = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+let result = [];
+for (let i = 0; i <= Math.floor(arrData.length / 2); i++) {
+  result.push({
+    type: "bar",
+    name: arrData[i],
+    data: [arrData[i], arrData[Math.floor(arrData.length / 2) + i]],
+  });
+}
+console.log(result);

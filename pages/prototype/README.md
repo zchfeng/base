@@ -15,3 +15,4 @@
 - obj 的原型指向 null(防止循环，需要一个终点)
 
 * [原型、原型链图解](https://github.com/zchfeng/js-base/tree/master/pages/prototype/index.png)
+  ![](./index.png)

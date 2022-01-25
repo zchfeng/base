@@ -16,4 +16,5 @@ response_type:返回类型，code
 
 ### 3、通过 code 去获取 access_token
 
+![H5微信授权流程图](./微信授权登录时序图.jpg)
 https://developers.weixin.qq.com/doc/offiaccount/OA_Web_Apps/Wechat_webpage_authorization.html
